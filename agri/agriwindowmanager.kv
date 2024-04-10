@@ -1,0 +1,86 @@
+AgriWindowManager:
+    AgriMainWindow:
+    AgriStatusScreen:
+    AgriPowerScreen:
+    AgriVarScreen:
+    AgriChecksScreen:
+    AgriSettingsScreen:
+
+<AgriMainWindow>:
+    name: 'main'
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Agri Control System'
+        Button:
+            text: 'Status'
+            on_press: 
+                root.manager.current = 'status'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'Power'
+            on_press: 
+                root.manager.current = 'power'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'Var'
+            on_press: 
+                root.manager.current = 'var'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'Checks'
+            on_press: 
+                root.manager.current = 'checks'
+                root.manager.transition.direction = 'left'
+        Button:
+            text: 'Settings'
+            on_press: 
+                root.manager.current = 'settings'
+                root.manager.transition.direction = 'left'
+
+
+    
+<AgriMainWindow>
+    name: 'main'
+
+<AgriStatusScreen>
+    name: 'status'
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
+
+<AgriPowerScreen>
+    name: 'power'
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
+
+<AgriVarScreen>
+    name: 'var'
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
+
+<AgriChecksScreen>  
+    name: 'checks'
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
+
+<AgriSettingsScreen>
+    name: 'settings'
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
+
+        
