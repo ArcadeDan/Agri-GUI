@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "Agri GUI"
+description = "A GUI for Agri Spray Drones"
+version = "0.1.0"
+authors = ["Daniel Sparks <lordaniel24@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[[tool.poetry.source]]
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+kivy = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
