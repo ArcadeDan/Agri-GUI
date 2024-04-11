@@ -1,20 +1,61 @@
 <AgriStatusScreen>
     name: 'status'
 
-    BoxLayout:
+    GridLayout:
         spacing: 5
         padding: 100
         margin: 50
-        size: root.width, root.height
-        orientation: 'horizontal'
-        Label:
-            text: 'Status'
-        TextInput:
-            text: ''
-            front_size: 50
 
-    Button:
-        text: 'Return'
-        on_press: 
-            root.manager.current = 'main'
-            root.manager.transition.direction = 'right'
+        BoxLayout:
+            spacing: 5
+            padding: 100
+            margin: 50
+            size: root.width, root.height
+            orientation: 'horizontal'
+            Spinner:
+                text: 
+                    'Resources'
+
+                values: ['Memory Usage', 'CPU Usage', 'Disk Usage', 'Network Usage']
+                size_hint: (0.5, 0.5)
+
+            Spinner:
+                text: 'Time'
+                values: ['Last 5 minutes', 'Last 10 minutes', 'Last 15 minutes', 'Last 30 minutes', 'Last 1 hour', 'Last 2 hours', 'Last 4 hours', 'Last 8 hours', 'Last 12 hours', 'Last 24 hours']
+                size_hint: (0.5, 0.5)
+            
+            Spinner:
+                text: 'Type'
+                values: ['Line', 'Bar', 'Pie']
+                size_hint: (0.5, 0.5)
+            
+            Spinner:
+                text: 'Update Interval'
+                values: ['1 minute', '5 minutes', '10 minutes', '15 minutes', '30 minutes', '1 hour', '2 hours', '4 hours', '8 hours', '12 hours', '24 hours']
+                size_hint: (0.5, 0.5)
+            
+            Spinner:
+                text: 'Threshold'
+                values: ['10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%']
+                size_hint: (0.5, 0.5)
+
+            
+
+        BoxLayout:
+            orientation: 'vertical'
+            
+            Label:
+                text: ''
+                
+
+            Button:
+                text: 'Return'
+                on_press: 
+                    root.manager.current = 'main'
+                    root.manager.transition.direction = 'right'
+                
+            Button:
+                text: 'Update'
+                on_press: 
+                    root.manager.current = 'status'
+                    root.manager.transition.direction = 'left'

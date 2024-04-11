@@ -18,6 +18,7 @@ class AgriStatusScreen(Screen):
     Builder.load_file('agri/kvs/agristatusscreen.kv')
 
 class AgriSettingsScreen(Screen):
+
     Builder.load_file('agri/kvs/agrisettingsscreen.kv')
 
 class AgriPowerScreen(Screen):
