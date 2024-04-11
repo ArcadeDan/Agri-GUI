@@ -1,8 +1,81 @@
 <AgriVarScreen>
     name: 'var'
-    Button:
-        text: 'Return'
-        on_press: 
-            root.manager.current = 'main'
-            root.manager.transition.direction = 'right'
+    
+    Image:
+        source: 'agri/images/Agri.png'
+        size: root.width / 3, root.height / 3
+        size_hint: None, None
+        pos: root.width - self.width , root.height - self.height
+        allow_stretch: True
+        keep_ratio: True
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: ''
+   
+        GridLayout:
+            cols: 5
+            rows: 5
+
+            Label:
+                text: 'Mixture (40L)'
+                font_size: 20
+
+            Label:
+                text: 'Battery %'
+                font_size: 20
+            Label:
+                text: 'Propeller RPM'
+                font_size: 20   
+
+            Label: 
+                text: 'Spray Rate'
+                font_size: 20
+
+            Label:
+                text: 'Speed'
+                font_size: 20
+
+            TextInput:
+                id: mixture
+                text: '40'
+                font_size: 20
+
+            TextInput:
+                id: battery
+                text: '100'
+                font_size: 20
+
+            TextInput:
+                id: rpm
+                text: '3000'
+                font_size: 20
+                
+            TextInput:
+                id: rate
+                text: '1'
+                font_size: 20
+                
+            TextInput:
+                id: speed
+                text: '40 mph'
+                font_size: 20
+            
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            padding: 50
+
+            size: root.width, root.height
+
+            Button:
+                text: 'Return'
+                on_press: 
+                    root.manager.current = 'main'
+                    root.manager.transition.direction = 'right'
+                       
+
+
             

@@ -1,5 +1,14 @@
 <AgriMainWindow>:
     name: 'main'
+
+    Image:
+        source: 'agri/images/Agri.png'
+        size: root.width / 3, root.height / 3
+        size_hint: None, None
+        pos: root.width - self.width , root.height - self.height
+        allow_stretch: True
+        keep_ratio: True
+
     GridLayout:
         spacing: 50
         padding: 100
@@ -23,14 +32,6 @@
             size: root.width, root.height
             orientation: 'vertical'
 
-            Image:
-                source: 'agri/images/ASD.png'
-                size: root.width / 4, root.height / 4
-                size_hint: None, None
-                pos: root.width - self.width , root.height - self.height
-                allow_stretch: True
-                keep_ratio: False
-                
             Label:
                 padding: 100
                 text: 'Agri Control System'

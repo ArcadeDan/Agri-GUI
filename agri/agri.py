@@ -14,6 +14,8 @@ from kivy.core.window import Window
 
 from time import strftime   
 
+# Screens for the AgriApp
+
 class AgriStatusScreen(Screen):
     Builder.load_file('agri/kvs/agristatusscreen.kv')
 
@@ -22,6 +24,8 @@ class AgriSettingsScreen(Screen):
     Builder.load_file('agri/kvs/agrisettingsscreen.kv')
 
 class AgriPowerScreen(Screen):
+
+
     Builder.load_file('agri/kvs/agripowerscreen.kv')
 
 class AgriVarScreen(Screen):
@@ -51,6 +55,5 @@ class AgriApp(App):
     def build(self):
     
         Window.size = (1024, 600)
-
         kv = Builder.load_file('agri/kvs/agriwindowmanager.kv')
         return kv

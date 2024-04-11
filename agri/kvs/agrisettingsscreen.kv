@@ -1,6 +1,14 @@
 <AgriSettingsScreen>
     name: 'settings'
 
+    Image:
+        source: 'agri/images/Agri.png'
+        size: root.width / 3, root.height / 3
+        size_hint: None, None
+        pos: root.width - self.width , root.height - self.height
+        allow_stretch: True
+        keep_ratio: True
+
     BoxLayout:
         spacing: 5
         padding: 100
@@ -14,21 +22,26 @@
 
         Label:
             text: 'User'
+            font_size: 50
+
         TextInput:
             text: ''
-            front_size: 50
+            font_size: 30
 
         Label:
             text: 'Password'
+            font_size: 50
+
         TextInput:
             text: ''
-            front_size: 50
+            font_size: 30
+
         Button:
             text: 'Login'
             background_color: 0, 1, 0, 100
 
         Button:
-            text: 'Return'
+            text: 'Return'  
             on_press: 
                 root.manager.current = 'main'
                 root.manager.transition.direction = 'right'

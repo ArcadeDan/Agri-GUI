@@ -6,36 +6,53 @@
         padding: 100
         margin: 50
 
+        Image:
+            source: 'agri/images/Agri.png'
+            size: root.width / 3, root.height / 3
+            size_hint: None, None
+            pos: root.width - self.width , root.height - self.height
+            allow_stretch: True
+            keep_ratio: True
+
         BoxLayout:
             spacing: 5
             padding: 100
             margin: 50
             size: root.width, root.height
             orientation: 'horizontal'
-            Spinner:
-                text: 
-                    'Resources'
 
+            Spinner:
+                text: 'Resources'
+                font_size: 20
+                color: 0, 1, 0, 1
                 values: ['Memory Usage', 'CPU Usage', 'Disk Usage', 'Network Usage']
                 size_hint: (0.5, 0.5)
 
             Spinner:
                 text: 'Time'
+                font_size: 20
+                color: 0, 1, 0, 1
                 values: ['Last 5 minutes', 'Last 10 minutes', 'Last 15 minutes', 'Last 30 minutes', 'Last 1 hour', 'Last 2 hours', 'Last 4 hours', 'Last 8 hours', 'Last 12 hours', 'Last 24 hours']
                 size_hint: (0.5, 0.5)
             
             Spinner:
                 text: 'Type'
+                font_size: 20
+                color: 0, 1, 0, 1
                 values: ['Line', 'Bar', 'Pie']
                 size_hint: (0.5, 0.5)
             
             Spinner:
                 text: 'Update Interval'
+                font_size: 20
+                color: 0, 1, 0, 1
                 values: ['1 minute', '5 minutes', '10 minutes', '15 minutes', '30 minutes', '1 hour', '2 hours', '4 hours', '8 hours', '12 hours', '24 hours']
                 size_hint: (0.5, 0.5)
             
             Spinner:
                 text: 'Threshold'
+                font_size: 20
+                color: 0, 1, 0, 1
                 values: ['10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%']
                 size_hint: (0.5, 0.5)
 
@@ -49,13 +66,15 @@
                 
 
             Button:
+                text: 'Update'
+                background_color: 0, 1, 0, 100
+                on_press: 
+                    root.manager.current = 'status'
+                    root.manager.transition.direction = 'left'
+
+            Button:
                 text: 'Return'
                 on_press: 
                     root.manager.current = 'main'
                     root.manager.transition.direction = 'right'
                 
-            Button:
-                text: 'Update'
-                on_press: 
-                    root.manager.current = 'status'
-                    root.manager.transition.direction = 'left'

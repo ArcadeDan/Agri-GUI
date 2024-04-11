@@ -1,7 +1,33 @@
 <AgriPowerScreen>
     name: 'power'
-    Button:
-        text: 'Return'
-        on_press: 
-            root.manager.current = 'main'
-            root.manager.transition.direction = 'right'
+
+    Image:
+        source: 'agri/images/Agri.png'
+        size: root.width / 3, root.height / 3
+        size_hint: None, None
+        pos: root.width - self.width , root.height - self.height
+        allow_stretch: True
+        keep_ratio: True
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            padding: 100
+            margin: 50
+            size: root.width, root.height
+
+            Label:
+                text: ''
+
+            ToggleButton:
+                id: power
+                text: 'Power'
+                font_size: 20
+                background_color: 0, 1, 0, 1
+
+
+            Button:
+                text: 'Return'
+                on_press: 
+                    root.manager.current = 'main'
+                    root.manager.transition.direction = 'right'
