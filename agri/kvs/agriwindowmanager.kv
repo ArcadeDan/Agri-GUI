@@ -112,23 +112,30 @@ AgriWindowManager:
 <AgriSettingsScreen>
     name: 'settings'
 
-    
-
     BoxLayout:
         spacing: 5
         padding: 100
         margin: 50
         size: root.width, root.height
-    
         orientation: 'vertical'
+        
+        Label:
+            text: 'User'
+        TextInput:
+            text: ''
+        Label:
+            text: 'Password'
+        TextInput:
+            text: ''
+        Button:
+            text: 'Login'
+
         Button:
             text: 'Return'
             on_press: 
                 root.manager.current = 'main'
                 root.manager.transition.direction = 'right'
-        Label:
-            id: time
-            text: '00:00'
+        
 
     
 

@@ -48,5 +48,5 @@ class AgriApp(App):
     #   Clock.schedule_interval(self.update, 0)
 
     def build(self):
-        kv = Builder.load_file('agri/agriwindowmanager.kv')
+        kv = Builder.load_file('agri/kvs/agriwindowmanager.kv')
         return kv
