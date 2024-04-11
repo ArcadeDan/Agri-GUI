@@ -1,0 +1,64 @@
+<AgriMainWindow>:
+    name: 'main'
+    GridLayout:
+        spacing: 50
+        padding: 100
+        
+        Button:
+            spacing: 50
+            padding: 100
+            background_color: 0, 0, 1, 0
+
+            on_press: 
+                root.manager.current = 'settings'
+                root.manager.transition.direction = 'left'
+            Image:
+                source: 'agri/images/gear.png'
+            
+
+        BoxLayout:
+            spacing: 5
+            padding: 100
+            margin: 50
+            size: root.width, root.height
+            orientation: 'vertical'
+
+            Image:
+                source: 'agri/images/ASD.png'
+                size: root.width / 4, root.height / 4
+                size_hint: None, None
+                pos: root.width - self.width , root.height - self.height
+                allow_stretch: True
+                keep_ratio: False
+                
+            Label:
+                padding: 100
+                text: 'Agri Control System'
+        
+            Button:
+                text: 'Status'
+                on_press: 
+                    root.manager.current = 'status'
+                    root.manager.transition.direction = 'left'
+            Button:
+                text: 'Power'
+                on_press: 
+                    root.manager.current = 'power'
+                    root.manager.transition.direction = 'left'
+            Button:
+                text: 'DJI Agras T40 Variables'
+                on_press: 
+                    root.manager.current = 'var'
+                    root.manager.transition.direction = 'left'
+            Button:
+                text: 'Checks'
+                on_press: 
+                    root.manager.current = 'checks'
+                    root.manager.transition.direction = 'left'
+    
+        
+
+    
+
+
+

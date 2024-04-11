@@ -1,0 +1,31 @@
+<AgriSettingsScreen>
+    name: 'settings'
+
+    BoxLayout:
+        spacing: 5
+        padding: 100
+        margin: 50
+        size: root.width, root.height
+        orientation: 'vertical'
+
+        Label:
+            text: 'User'
+        TextInput:
+            text: ''
+            front_size: 50
+
+        Label:
+            text: 'Password'
+        TextInput:
+            text: ''
+            front_size: 50
+        Button:
+            text: 'Login'
+            background_color: 0, 1, 0, 100
+
+        Button:
+            text: 'Return'
+            on_press: 
+                root.manager.current = 'main'
+                root.manager.transition.direction = 'right'
+        

@@ -1,0 +1,20 @@
+<AgriStatusScreen>
+    name: 'status'
+
+    BoxLayout:
+        spacing: 5
+        padding: 100
+        margin: 50
+        size: root.width, root.height
+        orientation: 'horizontal'
+        Label:
+            text: 'Status'
+        TextInput:
+            text: ''
+            front_size: 50
+
+    Button:
+        text: 'Return'
+        on_press: 
+            root.manager.current = 'main'
+            root.manager.transition.direction = 'right'
