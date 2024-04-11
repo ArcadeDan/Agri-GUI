@@ -6,8 +6,10 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.clock import Clock    
 from kivy.lang import Builder
 
+from time import strftime   
 
 
 
@@ -35,23 +37,16 @@ class AgriWindowManager(ScreenManager):
 
 
 class AgriApp(App):
+
+    # could not for the life of me get the timer to work.
+
+    # for the clock in the settings page
+    #def update(self, tick):
+    #    self.root.ids.screen_manager.get_screen('AgriSettingsScreen').ids.time.text = strftime('%H:%M:%S')
+    #
+    #def on_start(self):
+    #   Clock.schedule_interval(self.update, 0)
+
     def build(self):
         kv = Builder.load_file('agri/agriwindowmanager.kv')
-        # Window
-        self.window = GridLayout()
-        self.window.cols = 1
-        self.window.add_widget(Image(source='agri/images/ASD.png'))
-        self.window.size_hint = (0.5, 0.5)
-        self.window.pos_hint = {'center_x': 0.5, 'center_y': 0.5}
-        
-
-        # UI elements
-        self.greeting = Label(text="Hello, world!")
-        self.window.add_widget(self.greeting)
-        self.user = TextInput(multiline=False)
-        self.window.add_widget(self.user)
-
-        # Buttons
-        self.button = Button(text="Greet")
-        self.window.add_widget(self.button)
         return kv
