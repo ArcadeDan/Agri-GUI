@@ -11,15 +11,51 @@
 
     BoxLayout:
         orientation: 'vertical'
+
         Label:
             text: ''
+   
+        GridLayout:
+            cols: 5
+            rows: 5
 
-        CheckBox:
-            text: 'Check 1'
-        
+            Label:
+                text: 'Propellers'
+                font_size: 20
 
-        Button:
-            text: 'Return'
-            on_press: 
-                root.manager.current = 'main'
-                root.manager.transition.direction = 'right'
+            Label:
+                text: 'Spray'
+                font_size: 20
+            Label:
+                text: 'Front Camera'
+                font_size: 20   
+
+            Label: 
+                text: 'Back Camera'
+                font_size: 20
+
+            Label:
+                text: 'Speed'
+                font_size: 20
+
+            CheckBox:
+            CheckBox:
+            CheckBox:
+            CheckBox:
+            CheckBox:
+               
+            
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            padding: 50
+
+            size: root.width, root.height
+
+            Button:
+                text: 'Return'
+                font_size: 20
+                on_press: 
+                    root.manager.current = 'main'
+                    root.manager.transition.direction = 'right'
+                

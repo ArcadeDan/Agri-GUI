@@ -1,6 +1,5 @@
 <AgriStatusScreen>
     name: 'status'
-
     GridLayout:
         spacing: 5
         padding: 100
@@ -60,7 +59,6 @@
 
         BoxLayout:
             orientation: 'vertical'
-            
             Label:
                 text: ''
                 
@@ -68,12 +66,14 @@
             Button:
                 text: 'Update'
                 background_color: 0, 1, 0, 100
+                font_size: 20
                 on_press: 
                     root.manager.current = 'status'
                     root.manager.transition.direction = 'left'
 
             Button:
                 text: 'Return'
+                font_size: 20
                 on_press: 
                     root.manager.current = 'main'
                     root.manager.transition.direction = 'right'
