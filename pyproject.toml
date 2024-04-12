@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "Agri GUI"
 description = "A GUI for Agri Spray Drones"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Daniel Sparks <lordaniel24@gmail.com>"]
 readme = "README.md"
 package-mode = false

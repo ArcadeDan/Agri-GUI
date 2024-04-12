@@ -20,6 +20,11 @@ class AgriStatusScreen(Screen):
     Builder.load_file('agri/kvs/agristatusscreen.kv')
 
 class AgriSettingsScreen(Screen):
+    def update(self, tick):
+        self.root.ids.clock.text = strftime('%H:%M:%S')
+    def on_start(self):
+        Clock.schedule_interval(self.update, 0)
+
     Builder.load_file('agri/kvs/agrisettingsscreen.kv')
 
 class AgriPowerScreen(Screen):
